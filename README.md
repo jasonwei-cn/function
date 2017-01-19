@@ -62,11 +62,11 @@
         kl--;
         console.log(kl);
        }
-       console.log(kl);//全局kl=10
+       console.log(kl);//全局kl=10;
        rose();//4
-       console.log(kl);//全局kl=10
+       console.log(kl);//全局kl=10;
        jack();//9
-       console.log(kl);//全局kl=9
+       console.log(kl);//全局kl=9;
     
 
 （未完待更新！）
