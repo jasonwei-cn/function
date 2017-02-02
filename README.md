@@ -95,8 +95,59 @@ var n=100;
      比如：parseInt/Float(str)，isNaN(n)
 
      比如：alert() prompt()——BOM
+## 分支结构 ##
+分支结构：
+    程序结构：3种：
+     顺序结构：默认程序都是自上向下逐行顺序执行
+     分支结构：根据不同的条件，选择执行不同的操作
+             操作的复杂程度
+     循环结构：让程序反复执行同一代码段。
 
+    分支结构：3种情况：
+    1. 一个条件，一件事：满足条件就执行，(不满足就什么都不做)
+    短路逻辑：条件&&(操作1,操作2...)
+        何时使用：操作非常简单时
+      if结构：如果 满足*条件*, 就执行代码段
+              if(条件){
+	 	满足条件时，才能执行的代码段
+              }
 
+```
+var price=parseFloat(prompt("请输入单价"));
+			var count=parseFloat(prompt("输入数量"));
+			var money=parseFloat(prompt("输入收款金额"));
+            var total=price*count;
+			if(total>=500){
+				total*=0.8;
+			}
+			var change=money-total;
+			console.log("应收："+total+";找零"+change);
+```
+
+    2. 一个条件，两件事：二选一执行！
+             如果 满足*条件*，就执行操作1，否则，执行操作2
+          三目运算：条件?操作1:操作2;
+            何时使用：操作1和操作2，都非常简单时
+             if...else结构：
+             if(条件){
+    	    满足条件才执行的代码段
+             }else{//否则
+    	    不满足条件才执行的代码段
+             }
+
+```
+var price=parseFloat(prompt("请输入单价"));
+			var count=parseFloat(prompt("输入数量"));
+			var money=parseFloat(prompt("输入收款金额"));
+			var total=price*count;
+			if(money>=total){
+				var change=money-total;
+			  console.log("应收："+total+";找零"+change);
+			}else{
+				var change=total-moeny;
+			  console.log("应收："+total+";还差"+change);
+			}
+```
 
 
 
