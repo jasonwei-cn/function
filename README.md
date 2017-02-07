@@ -148,8 +148,92 @@ var price=parseFloat(prompt("请输入单价"));
 			  console.log("应收："+total+";还差"+change);
 			}
 ```
+   3. 多个条件，多件事，多选一执行！(有可能都不执行)
+         如果 满足 条件1 就执行 操作1
+    否则，如果满足 条件2 就执行 操作2
+    ... ...
+                      [否则，默认操作]
+      三目：条件1?操作1:
+            条件2?操作2:
+                    ...:
+                默认操作——不可省略
+      if...else if结构：
+           if(条件1){
+		满足条件1才执行的操作1;
+            }else if(条件2){
+		满足条件2才执行的操作2;
+            }else if(...){
+		...
+            }[else{
+ 		如果以上任何条件都不满足，则执行默认操作
+            }]
+```
+if (score<0||score>100) {
+      console.log("无效分数");
+     } else if(score>=90){
+      console.log("A");
+     } else if (score>=80) {
+      console.log("B");
+     } else if (score>=70) {
+      console.log("C");
+     }  else {
+      console.log("D");
+     }
+```
 
+  
 
+switch...case结构:
+何时使用：当条件都是*全等*比较时,才可用switch结构
+  switch(表达式){ //1. 计算表达式的结果
+    //用表达式的值和每个case后的值做**全等**比较
+    //碰到一个全等的case值，则进入该case开始执行
+//并默认以此触发之后所有case的执行
+case 值1:
+     满足值1才执行的代码段1;
+    case 值2:
+         满足值2才执行的代码段2;
+         ...:
+         ... ...
+     default:
+     如果前边的值都不满足，执行默认代码段
+  }
+
+```
+ switch(parseInt(prompt("请按键："))){
+      case 1:
+      console.log("查询进行中.....");
+      case 2:
+      console.log("取款中......");
+      case 3:
+      console.log("转账进行中....");
+      case 0:
+      console.log("欢迎下次再来!");
+      default:
+      console.lop("无效按键");
+     }
+```
+
+  break: *中止*当前结构的执行，并跳出结构。
+    位置：在每个case之间
+  何时可以省略部分break：上下两个case希望执行相同代码时
+
+```
+switch(parseInt(prompt("请按键："))){
+      case 1:
+      console.log("查询进行中.....");
+      break;
+      case 2:
+      case 3:
+      console.log("系统维护中....");
+      break;
+      case 0:
+      console.log("欢迎下次再来!");
+      break;
+      default:
+      console.log("无效按键");
+     }
+```
 
 
   
